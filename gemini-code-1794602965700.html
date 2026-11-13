@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2015 Roadtrip Map</title>
+
+  <!-- Leaflet Map CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="map"></div>
+
+  <!-- Floating Header & Legend Card -->
+  <aside class="hud-card">
+    <div class="hud-header">
+      <h1>Autumn 2015 Roadtrip</h1>
+      <p class="subtitle">Oct 6 – Nov 4, 2015 &bull; New Haven to Santa Fe</p>
+    </div>
+
+    <div class="stats-row" id="trip-stats">
+      <div class="stat">
+        <span class="stat-val" id="stat-stops">21</span>
+        <span class="stat-label">Stops</span>
+      </div>
+      <div class="stat">
+        <span class="stat-val" id="stat-miles">Calculating...</span>
+        <span class="stat-label">Est. Drive</span>
+      </div>
+    </div>
+
+    <div class="legend">
+      <div class="legend-item">
+        <span class="dot dot-story"></span>
+        <span>Stop with a story</span>
+      </div>
+      <div class="legend-item">
+        <span class="dot dot-empty"></span>
+        <span>Stop (no notes yet)</span>
+      </div>
+    </div>
+
+    <div class="controls">
+      <label for="stop-select" class="sr-only">Jump to a stop</label>
+      <select id="stop-select">
+        <option value="">Jump to a city...</option>
+      </select>
+    </div>
+  </aside>
+
+  <!-- Leaflet JS -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+  <!-- Your Trip Data -->
+  <script src="stops.js"></script>
+  <!-- Map Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
